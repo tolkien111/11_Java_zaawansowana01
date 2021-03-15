@@ -14,15 +14,33 @@ public class Car extends Vehicle {
         System.out.println("Car with " + passengers + " passangers running at " + velocity);
     }
 
+    @Override
+    public String toString() {
+        return "Car{" +
+                "passengers=" + passengers +
+                '}';
+    }
+
     public void addPassengers() {
-        passengers += 1;
+        if (passengers >= 4) {
+            System.out.println("osiągnięto maksymalną liczbę pasażerów - 4 ");
+        }else{
+            passengers += 1;
+        }
         System.out.println("Now we have " + passengers + " passengers");
     }
 
     public void removePassengers() {
-        passengers -= 1;
+        if (passengers <= 0) {
+            System.out.println("błędna liczba pasażerów, liczba nie może być mniejsza niż zero");
+        }else{
+            passengers -= 1;
+
+        }
         System.out.println("Now we have " + passengers + " passengers");
     }
+
+
 
 
 }

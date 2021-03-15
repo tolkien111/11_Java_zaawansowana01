@@ -29,10 +29,28 @@ public class VehicleApp {
         Motocycle motocycle01 = new Motocycle();
         runThisVehicle(motocycle01);
 
+        ConvertibleCar kabrio = new ConvertibleCar();
+        kabrio.openRoof(false);
+        kabrio.openRoof(true);
+
+        car01.addPassengers();
+        car01.addPassengers();
+        car01.addPassengers();
+        car01.addPassengers();
+
+        car01.removePassengers();
+        car01.removePassengers();
+        car01.removePassengers();
+        car01.removePassengers();
+        car01.removePassengers();
+
+
     }
     public static void  runThisVehicle (Vehicle vehicle){
         vehicle.run(222);
     }
+
+
 
 
 
