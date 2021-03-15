@@ -59,6 +59,14 @@ public class ZooApp {
         Ground ground = new Ground();
         ground.runOnGround(eagle, 10);
         ground.runOnGround(duck, 5);
+        System.out.println("-------------------------------------");
+
+
+        Dog dog = new Dog();
+        dog.eat("mięso");
+        ground.runOnGround(dog, 12);
+
+
 
 
     }
