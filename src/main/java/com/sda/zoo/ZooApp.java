@@ -32,8 +32,8 @@ public class ZooApp {
         anotherEagle.eat("mouse");
 
         FlyBehavior plain = new FlyBehavior() { // implementujemy klasę anonimową (anonimowa czyli nie ma nazwy)
-                                                // potrzebne gdy chcemy dodać konkretną funkcjonalność w programie
-                                                // która będzie potrzebna tylko w tym miejscu
+            // potrzebne gdy chcemy dodać konkretną funkcjonalność w programie
+            // która będzie potrzebna tylko w tym miejscu
             @Override
             public void fly(double height) {
                 if (height >= 3000) {
@@ -53,16 +53,15 @@ public class ZooApp {
 
         RunBehavior eagleRunBehavior = new Eagle();
         eagleRunBehavior.run(10);
+        System.out.println("-------------------------------------");
 
 
         Ground ground = new Ground();
-        ground.runOnGround(eagle,10);
-
+        ground.runOnGround(eagle, 10);
         ground.runOnGround(duck, 5);
 
 
     }
-
 
 
 }
