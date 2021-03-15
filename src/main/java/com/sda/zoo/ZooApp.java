@@ -53,6 +53,14 @@ public class ZooApp {
 
         RunBehavior eagleRunBehavior = new Eagle();
         eagleRunBehavior.run(10);
+
+
+        Ground ground = new Ground();
+        ground.runOnGround(eagle,10);
+
+        ground.runOnGround(duck, 5);
+
+
     }
 
 

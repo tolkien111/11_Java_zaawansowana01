@@ -3,6 +3,11 @@ package com.sda.zoo;
 public class Duck extends Animal implements FlyBehavior, RunBehavior {
 
     @Override
+    public String toString() {
+        return "Duck ";
+    }
+
+    @Override
     public void eat (String something){
         System.out.println("Duck is eating " + something);
     }
