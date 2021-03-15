@@ -6,11 +6,19 @@ public class ZooApp {
 
         Eagle eagle = new Eagle();
         eagle.fly(120);
+        eagle.run(4);
+        eagle.run(7);
+        eagle.run(-4);
         System.out.println();
+
 
         Duck duck = new Duck();
         duck.fly(80);
+        duck.run(15);
+        duck.run(-20);
+        duck.run(32);
         System.out.println();
+
 
         Air air = new Air();
         air.flyInAir(eagle);
@@ -37,5 +45,16 @@ public class ZooApp {
             }
         }; // klasa anonimowa, java widzi ją to jak jedną linijką kodu, pokazuje jej to średnik na końcu
         plain.fly(4000);
+
+
+        RunBehavior duckRunBehavior = new Duck();
+        duckRunBehavior.run(30);
+
+
+        RunBehavior eagleRunBehavior = new Eagle();
+        eagleRunBehavior.run(10);
     }
+
+
+
 }

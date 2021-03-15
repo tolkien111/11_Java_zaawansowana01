@@ -1,6 +1,6 @@
 package com.sda.zoo;
 
-public class Duck extends Animal implements FlyBehavior {
+public class Duck extends Animal implements FlyBehavior, RunBehavior {
 
     @Override
     public void eat (String something){
@@ -15,5 +15,16 @@ public class Duck extends Animal implements FlyBehavior {
         }
         System.out.println("Duck fly at " + height);
         System.out.println("Duck fly at " + actualHeight);
+    }
+
+    @Override
+    public void run (double speed) {
+        if (speed >= 20) {
+            System.out.println("Maksymalna prędkość kaczki to 20");
+        }else if (speed < 0){
+            System.out.println("Prędkość kaczki nie może być mniejsza od zera");
+        }else{
+            System.out.println("Prędkość kaczki to " + speed);
+        }
     }
 }
