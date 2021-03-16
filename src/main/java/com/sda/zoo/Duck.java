@@ -23,13 +23,16 @@ public class Duck extends Animal implements FlyBehavior, RunBehavior {
     }
 
     @Override
-    public void run(double speed) {
+    public String run(double speed) {
         if (speed >= 20) {
-            System.out.println("Maksymalna prędkość kaczki to 20");
+            speed = 20;
+            System.out.println("Maksymalna prędkość kaczki to " + speed);
         } else if (speed < 0) {
-            System.out.println("Prędkość kaczki nie może być mniejsza od zera");
+            speed = 0;
+            System.out.println("Prędkość kaczki nie może być mniejsza od " + speed);
         } else {
             System.out.println("Prędkość kaczki to " + speed);
         }
+        return null;
     }
 }

@@ -1,5 +1,7 @@
 package com.sda.zoo;
 
+import java.math.RoundingMode;
+
 public class ZooApp {
 
     public static void main(String[] args) {
@@ -64,7 +66,10 @@ public class ZooApp {
 
         Dog dog = new Dog();
         dog.eat("mięso");
-        ground.runOnGround(dog, 12);
+        ground.runOnGround(dog, 50);
+
+        Robot robot = new Robot();
+        ground.runOnGround(robot, 55);
 
 
 
