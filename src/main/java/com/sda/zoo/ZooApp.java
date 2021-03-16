@@ -70,8 +70,29 @@ public class ZooApp {
 
         Robot robot = new Robot();
         ground.runOnGround(robot, 55);
+        System.out.println("-------------------------------------");
 
+        RunBehavior gepard = new RunBehavior(){
 
+            @Override
+            public String toString() {
+                return "Gepard ";
+            }
+
+            @Override
+            public String run(double speed) {
+
+                String name = "gepard";
+                if (speed < 300) {
+                    speed = 300;
+                    System.out.println(name + " run at speed " + speed);
+                } else {
+                    System.out.println(name + " run at speed " + speed);
+                } return null;
+            }
+        };
+        gepard.run(350);
+        ground.runOnGround(gepard, 200);
 
 
     }
