@@ -27,6 +27,7 @@ public class Diary {
         }
         return dziennik;
     }
+
     @Override
     public String toString() {
         return "Diary{" +
