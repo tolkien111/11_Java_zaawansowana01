@@ -1,8 +1,8 @@
 package com.sda.opp.zadania.Zadanie3;
 
-public class Shape {
-    private String color;
-    private boolean isFilled;
+public abstract class Shape {
+    protected String color;
+    protected boolean isFilled;
 
     public Shape() {
         color = "unknown";
@@ -13,6 +13,10 @@ public class Shape {
         this.color = color;
         this.isFilled = isFilled;
     }
+
+    public abstract double getArea();
+
+    public abstract double getPerimeter();
 
     public String getColor() {
         return color;

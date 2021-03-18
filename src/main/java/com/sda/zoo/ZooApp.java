@@ -72,7 +72,7 @@ public class ZooApp {
         ground.runOnGround(robot, 55);
         System.out.println("-------------------------------------");
 
-        RunBehavior gepard = new RunBehavior(){
+        RunBehavior gepard = new RunBehavior() {
 
             @Override
             public String toString() {
@@ -88,7 +88,8 @@ public class ZooApp {
                     System.out.println(name + " run at speed " + speed);
                 } else {
                     System.out.println(name + " run at speed " + speed);
-                } return null;
+                }
+                return null;
             }
         };
         gepard.run(350);

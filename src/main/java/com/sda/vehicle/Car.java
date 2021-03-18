@@ -24,7 +24,7 @@ public class Car extends Vehicle {
     public void addPassengers() {
         if (passengers >= 4) {
             System.out.println("osiągnięto maksymalną liczbę pasażerów - 4 ");
-        }else{
+        } else {
             passengers += 1;
         }
         System.out.println("Now we have " + passengers + " passengers");
@@ -33,14 +33,12 @@ public class Car extends Vehicle {
     public void removePassengers() {
         if (passengers <= 0) {
             System.out.println("błędna liczba pasażerów, liczba nie może być mniejsza niż zero");
-        }else{
+        } else {
             passengers -= 1;
 
         }
         System.out.println("Now we have " + passengers + " passengers");
     }
-
-
 
 
 }

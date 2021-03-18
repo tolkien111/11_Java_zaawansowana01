@@ -27,11 +27,13 @@ public class VehicleApp {
         System.out.println();
 
         Motocycle motocycle01 = new Motocycle();
-        runThisVehicle(motocycle01);
+
+        System.out.println("-----------------------------");
 
         ConvertibleCar kabrio = new ConvertibleCar();
         kabrio.openRoof(false);
         kabrio.openRoof(true);
+        kabrio.closeRoof(false);
 
         car01.addPassengers();
         car01.addPassengers();
@@ -46,12 +48,10 @@ public class VehicleApp {
 
 
     }
-    public static void  runThisVehicle (Vehicle vehicle){
+
+    public static void runThisVehicle(Vehicle vehicle) {
         vehicle.run(222);
     }
-
-
-
 
 
 }

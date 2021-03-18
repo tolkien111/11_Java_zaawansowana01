@@ -13,7 +13,7 @@ public class ConvertibleCar extends Car {
     }
 
     public void closeRoof(boolean roofStatus) {
-        if (!roofStatus) {
+        if (roofStatus) {
             System.out.println("Dach jest zamknięty");
         } else {
             roofStatus = false;

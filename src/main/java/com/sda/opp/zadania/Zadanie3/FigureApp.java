@@ -5,12 +5,13 @@ public class FigureApp {
     public static void main(String[] args) {
 
 
-        Shape shape = new Shape("yellow", true);
-        System.out.println(shape);
+//        Shape shape = new Shape("yellow", true);
+//        System.out.println(shape);
 
         Circle circle = new Circle("red", false, 12);
         System.out.println(circle);
-        System.out.println(circle.getArea(12));
+        System.out.println(circle.getArea());
+        System.out.println(circle.getPerimeter());
 
         Rectangle rectangle = new Rectangle();
         Rectangle rectangle1 = new Rectangle("black", false, 7f,15f);

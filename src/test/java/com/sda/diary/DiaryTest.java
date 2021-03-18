@@ -2,6 +2,8 @@ package com.sda.diary;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import java.awt.*;
 import java.time.LocalDate;
 import static org.junit.jupiter.api.Assertions.*;
 class DiaryTest {
@@ -11,6 +13,7 @@ class DiaryTest {
         diary.writeEntry("Wpis1");
         diary.writeEntry("Wpis2");
         System.out.println(diary.getEntries().get(0));
+        System.out.println(diary.getEntries().get(1));
         int c = diary.getEntries().size();
         assertEquals(2, c);
     }
@@ -21,7 +24,7 @@ class DiaryTest {
         diary.writeEntry("Witaj jozefie");
         diary.writeEntry("Witaj jozefie2");
         diary.writeEntry("Witaj jozefie3");
-        int b = diary.getEntriesFrom(LocalDate.of(2021, 3, 16)).size();
+        int b = diary.getEntriesFrom(LocalDate.now()).size();
         System.out.println(b);
         Assertions.assertEquals(3, b);
     }

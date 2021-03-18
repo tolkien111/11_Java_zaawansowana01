@@ -1,6 +1,6 @@
 package com.sda.opp.zadania.Zadanie3;
 
-public class Circle extends Shape{
+public class Circle extends Shape {
     private float radius;
 
     public Circle() {
@@ -21,11 +21,15 @@ public class Circle extends Shape{
     public void setRadius(int radius) {
         this.radius = radius;
     }
-    public float getArea (float radius){
+
+    @Override
+    public double getArea() {
         float area = radius * radius;
         return area;
     }
-    public double getPerimeter (float radius){
+
+    @Override
+    public double getPerimeter() {
         double perimeter = 2 * Math.PI * radius;
         return perimeter;
     }

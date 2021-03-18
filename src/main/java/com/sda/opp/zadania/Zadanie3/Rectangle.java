@@ -17,6 +17,18 @@ public class Rectangle extends Shape {
         this.width = width;
     }
 
+    @Override
+    public double getArea() {
+        double area = length * width;
+        return area;
+    }
+
+    @Override
+    public double getPerimeter() {
+        double perimeter = (2 * length) + (2 * width);
+        return perimeter;
+    }
+
     public double getLength() {
         return length;
     }
@@ -31,15 +43,6 @@ public class Rectangle extends Shape {
 
     public void setWidth(double width) {
         this.width = width;
-    }
-
-    public double getArea (double lenght, double width){
-        double area = lenght * width;
-        return area;
-    }
-    public double getPerimeter (double lenght, double width){
-        double perimeter = (2 * lenght) + (2 * width);
-        return perimeter;
     }
 
     @Override
