@@ -1,4 +1,4 @@
-package com.sda.opp.zadania.Zadanie3;
+package com.sda.opp.zadania.zadanie3;
 
 public class Rectangle extends Shape {
     private double length;

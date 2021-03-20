@@ -1,4 +1,4 @@
-package com.sda.opp.zadania.Zadanie2;
+package com.sda.opp.zadania.zadanie2;
 
 public abstract class Person {
     private String name;
