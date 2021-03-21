@@ -15,7 +15,7 @@ public class CheckedExceptionApp {
         }
         System.out.println("Zamykam program.");
     }
-    static void greet(String name) throws Exception { // throws oznaczenie metody rzucającej wyjątek (opowiązkowe do checked exception
+    static void greet(String name) throws Exception { // throws oznaczenie metody rzucającej wyjątek (opowiązkowe do checked exception jeśli metoda sama go nie obsługuje/łapie)
                                                       // nieobowiązkowe dla unchecked exception
         if (name == null || name.isEmpty()) {
             throw new Exception("Imię jest puste");

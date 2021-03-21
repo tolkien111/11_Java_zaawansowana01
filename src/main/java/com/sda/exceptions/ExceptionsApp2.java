@@ -24,9 +24,9 @@ public class ExceptionsApp2 {
         if (name == null || name.isEmpty()) {
             throw new IllegalArgumentException("Nie wprowadzono imienia");
         }
-        System.out.println("Hello " + name);
         if (name.length() == 1) {
             throw new IllegalArgumentException("Imię jest zbyt krótkie");
         }
+        System.out.println("Hello " + name);
     }
 }

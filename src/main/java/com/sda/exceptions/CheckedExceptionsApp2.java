@@ -17,9 +17,10 @@ public class CheckedExceptionsApp2 {
         System.out.println("Zamykam program.");
     }
 
-    //Checked Exception bez łapania go
-    static void greet(String name) throws Exception { //oznaczenie metody jako rzucającej wyjątek(obowiązkowe dla checked exception,dla unchecked
-        //opcjonalne
+    //Checked Exception bez łapania
+    static void greet(String name) throws Exception {   //oznaczenie metody jako rzucającej wyjątek(obowiązkowe dla checked exception jeśli metoda sama go nie obsługuje/łapie,
+                                                        // dla unchecked opcjonalne
+
         if (name == null || name.isEmpty()) {
             throw new Exception("Imię jest puste");
         }
@@ -29,7 +30,7 @@ public class CheckedExceptionsApp2 {
         System.out.println("Hello " + name);
     }
 
-//     //Checked Exception
+//     //Checked Exception z łapaniem
 //    static void greet(String name) {
 //        try {
 //            if (name == null || name.isEmpty()) {
