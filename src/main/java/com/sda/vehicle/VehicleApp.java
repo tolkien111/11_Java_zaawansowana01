@@ -17,7 +17,7 @@ public class VehicleApp {
         System.out.println();
         System.out.println("Dostęp z zewnątrz " + motocycle.getWheels());
         System.out.println();
-//
+
         vehicle = new Car();
         vehicle.run(100);
         System.out.println();
@@ -31,9 +31,15 @@ public class VehicleApp {
         System.out.println("-----------------------------");
 
         ConvertibleCar kabrio = new ConvertibleCar();
-        kabrio.openRoof(false);
-        kabrio.openRoof(true);
-        kabrio.closeRoof(false);
+        kabrio.setRoofStatusOpened(false);
+        kabrio.openRoof();
+        kabrio.setRoofStatusOpened(true);
+        kabrio.openRoof();
+        kabrio.setRoofStatusOpened(true);
+        kabrio.closeRoof();
+        kabrio.setRoofStatusOpened(false);
+        kabrio.closeRoof();
+        System.out.println("-----------------------------");
 
         car01.addPassengers();
         car01.addPassengers();
