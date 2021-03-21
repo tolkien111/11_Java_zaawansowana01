@@ -1,4 +1,4 @@
-package com.sda.wyjatki.zadania.Zadanie1;
+package com.sda.wyjatki.zadania.zadanie1;
 
 public class cannotDivideBy0Exception extends Exception {
 
