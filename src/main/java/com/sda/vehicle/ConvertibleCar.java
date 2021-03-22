@@ -1,7 +1,7 @@
 package com.sda.vehicle;
 
 public class ConvertibleCar extends Car {
-    private boolean roofStatusOpened;
+    private boolean roofStatusOpened; // boolean przyjmuje domyślnie false -> domyślnie dach jest zamknięty
 
     public void openRoof() {
         if (roofStatusOpened) {
@@ -9,6 +9,7 @@ public class ConvertibleCar extends Car {
         } else {
             System.out.println("Otwieranie dachu...");
         }
+        roofStatusOpened = true;
     }
 
 
@@ -18,8 +19,7 @@ public class ConvertibleCar extends Car {
         } else {
             System.out.println("Dach jest zamknięty");
         }
-    }
-    public void setRoofStatusOpened(boolean roofStatusOpened) {
-        this.roofStatusOpened = roofStatusOpened;
+        roofStatusOpened = false;
     }
 }
+

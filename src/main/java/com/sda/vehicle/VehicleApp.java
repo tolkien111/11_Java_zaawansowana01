@@ -31,14 +31,12 @@ public class VehicleApp {
         System.out.println("-----------------------------");
 
         ConvertibleCar kabrio = new ConvertibleCar();
-        kabrio.setRoofStatusOpened(false);
+
         kabrio.openRoof();
-        kabrio.setRoofStatusOpened(true);
         kabrio.openRoof();
-        kabrio.setRoofStatusOpened(true);
         kabrio.closeRoof();
-        kabrio.setRoofStatusOpened(false);
         kabrio.closeRoof();
+
         System.out.println("-----------------------------");
 
         car01.addPassengers();

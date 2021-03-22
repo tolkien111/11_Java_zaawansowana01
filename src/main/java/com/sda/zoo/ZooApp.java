@@ -80,7 +80,7 @@ public class ZooApp {
             }
 
             @Override
-            public String run(double speed) {
+            public void run(double speed) {
 
                 String name = "gepard";
                 if (speed < 300) {
@@ -89,7 +89,6 @@ public class ZooApp {
                 } else {
                     System.out.println(name + " run at speed " + speed);
                 }
-                return null;
             }
         };
         gepard.run(350);

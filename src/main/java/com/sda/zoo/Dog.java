@@ -13,7 +13,7 @@ public class Dog extends Animal implements RunBehavior {
     }
 
     @Override
-    public String run(double speed) {
+    public void run(double speed) {
         if (speed >= 40) {
             speed = 40;
             System.out.println("Maksymalna prędkość psa to " + speed);
@@ -22,8 +22,6 @@ public class Dog extends Animal implements RunBehavior {
             System.out.println("Prędkość psa nie może być mniejsza od " + speed);
         }
         System.out.println("Prędkość psa to " + speed);
-        return null;
-
     }
 }
 

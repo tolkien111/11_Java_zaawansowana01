@@ -19,7 +19,7 @@ public class Eagle extends Animal implements FlyBehavior, RunBehavior {
     }
 
     @Override
-    public String run(double speed) {
+    public void run(double speed) {
         if (speed >= 5) {
             speed = 5;
             System.out.println("Maksymalna prędkość orła to " + speed);
@@ -29,9 +29,5 @@ public class Eagle extends Animal implements FlyBehavior, RunBehavior {
         } else {
             System.out.println("Prędkość orła to " + speed);
         }
-        return null;
-
-
     }
-
 }
