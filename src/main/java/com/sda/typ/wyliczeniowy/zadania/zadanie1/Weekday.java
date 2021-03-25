@@ -37,10 +37,9 @@ public enum Weekday {
         } else if (this.compareTo(weekday) > 0) {
             System.out.println(this +
                     " is after " + weekday);
-        }else{
+        } else if (this.compareTo(weekday) == 0)
             System.out.println(this +
                     " and " + weekday + " are the same days");
-        }
-
     }
+
 }
