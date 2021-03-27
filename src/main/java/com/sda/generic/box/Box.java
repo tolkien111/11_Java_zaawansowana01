@@ -1,4 +1,4 @@
-package com.sda.generic;
+package com.sda.generic.box;
 
 public class Box <T> { //ostre nawiasy symbolizują klasę generyczną
     T item;

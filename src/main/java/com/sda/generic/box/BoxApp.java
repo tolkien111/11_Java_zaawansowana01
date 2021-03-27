@@ -1,6 +1,8 @@
-package com.sda.generic;
+package com.sda.generic.box;
 
 //Klasy generyczne
+
+import com.sda.generic.box.Box;
 
 public class BoxApp {
     public static void main(String[] args) {
