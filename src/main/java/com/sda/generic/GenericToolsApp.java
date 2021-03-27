@@ -3,7 +3,7 @@ package com.sda.generic;
 public class GenericToolsApp {
 
     public static void main(String[] args) {
-        Integer[] numbers = {1, 2, 3, 5, 6, 5};
+        Integer[] numbers = {1, 2, 3, 44, 6, 44};
         findDuplicates(numbers);
     }
 
@@ -17,11 +17,11 @@ public class GenericToolsApp {
         for (int i = 0; i < array.length; i++) {
             for (int j = i + 1; j < array.length; j++) {
                 if (array[i].equals(array[j])) {
-                    System.out.println("Found " + array[i]);
-                    return;
+                    System.out.println("Found duplicated number: " + array[i]);
+                    return;                 //kończy pracę przy pierszej powtórce
                 }
             }
         }
-        System.out.println("Not found");
+        System.out.println("Not found"); // jeżeli nie znajdzie powtórki to wyświetli ten tekst
     }
 }

@@ -12,7 +12,7 @@ public class Road<T extends Vehicle> {
         this.item = item;
     }
 
-    public void runThisVehicle(double speed) {
+    public void runThisVehicle(double speed) { // nadpisujemy metodę run z klasy Vehicle
         item.run(speed);
     }
 

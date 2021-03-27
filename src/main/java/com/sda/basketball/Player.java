@@ -38,6 +38,11 @@ public class Player implements Comparable<Player> {
         this.height = height;
     }
 
+//Metoda compareTo ma zwracać:
+//dodatnią liczbę jeśli this jest wyższy od otrzymanego gracza
+//zero jeśli obaj mają ten sam wzrost
+//ujemną liczbę jeśli otrzymany jest wyższy
+
     @Override
     public int compareTo(Player other) {
         if (this.getHeight() > other.getHeight()) {
@@ -48,7 +53,7 @@ public class Player implements Comparable<Player> {
             return 0;
         }
     }
-
+                                                    //nadpisanie metod equals i hashCode do BasketballApp
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
