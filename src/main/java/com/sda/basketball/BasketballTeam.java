@@ -64,15 +64,14 @@ public class BasketballTeam {
     }
 
 
-//    public Optional<Player> getHigherPlayersThan200() {
-//        List<Player> playersHigherThan200 = new ArrayList<>();
-//        for (Player player : players) {
-//            if (player.getHeight() > 200) {
-//                playersHigherThan200.add(player);
-//            }
-//            return Optional.of(playersHigherThan200));
-//        }
-//        return Optional.empty();
-//    }
+    public List<Player> getHigherPlayersThan200() {
+        List<Player> playersHigherThan200 = new ArrayList<>();
+        for (Player player : players) {
+            if (player.getHeight() > 200) {
+                playersHigherThan200.add(player);
+            }
+        }
+        return playersHigherThan200;
+    }
 }
 

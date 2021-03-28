@@ -36,8 +36,8 @@ public class BasketballApp {
         System.out.println("Przefiltrowane imiona:" + team.getPlayerNames());
         System.out.println("3\n");
 
-//        System.out.println(team.getHigherPlayersThan200());
-//        System.out.println("4\n");
+        System.out.println(team.getHigherPlayersThan200());
+        System.out.println("4\n");
 
         System.out.println("-----------------------------------------------------------------"); // Druga część
 
