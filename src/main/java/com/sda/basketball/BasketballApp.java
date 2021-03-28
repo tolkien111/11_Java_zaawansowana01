@@ -8,7 +8,7 @@ import java.util.List;
 public class BasketballApp {
     public static void main(String[] args) {
         // ZESPOL BASKETBALL TEAM
-        Player youngJordan = new Player("M", "J", 198); //dwóch jordanow, dwóch identycznych ale inaczej zadeklarowanych
+        Player youngJordan = new Player("M", "J", 180); //dwóch jordanow, dwóch identycznych ale inaczej zadeklarowanych
         Player oldJordan = new Player("M", "J", 198);
         Player gortat = new Player("M", "G", 211);
         Player ming = new Player("Y", "M", 229);
@@ -25,15 +25,21 @@ public class BasketballApp {
         team.addPlayer(gortat);
         team.addPlayer(ming);
 
-        System.out.println(team.getPlayers());
+        System.out.println("przed filtrowaniem" + team.getPlayers());
         System.out.println("2\n");
 
         System.out.println(team.getHigherThan200().toString());
+//Do PREDICATE
+        System.out.println("przefiltrowane do 180 (Predicat + ForLoop): " + team.higherThan180ForLoop());
+//STREAM
+        System.out.println("Przefiltrowane ze STREAM: " + team.higherThan180Stream());
+        System.out.println("Przefiltrowane imiona:" + team.getPlayerNames());
         System.out.println("3\n");
 
 //        System.out.println(team.getHigherPlayersThan200());
 //        System.out.println("4\n");
 
+        System.out.println("-----------------------------------------------------------------"); // Druga część
 
         // SORTOWANIE
         List<Player> players = new ArrayList<>();
