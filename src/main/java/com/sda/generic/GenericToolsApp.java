@@ -13,11 +13,11 @@ public class GenericToolsApp {
         System.out.println(item.getClass());
     }
 
-    public static <T> void findDuplicates(T[] array) {
-        for (int i = 0; i < array.length; i++) {
-            for (int j = i + 1; j < array.length; j++) {
-                if (array[i].equals(array[j])) {
-                    System.out.println("Found duplicated number: " + array[i]);
+    public static <T> void findDuplicates(T[] arrayT) {
+        for (int i = 0; i < arrayT.length; i++) {
+            for (int j = i + 1; j < arrayT.length; j++) {
+                if (arrayT[i].equals(arrayT[j])) {
+                    System.out.println("Found duplicated number: " + arrayT[i]);
                     return;                 //kończy pracę przy pierszej powtórce
                 }
             }

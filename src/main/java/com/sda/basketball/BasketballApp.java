@@ -58,6 +58,10 @@ public class BasketballApp {
         System.out.println("PO NATUAL ORDER");
         System.out.println(players);
 
+        // Collections.sort przyjmie do siebie tylko listy, które implementują comparatora
+        Collections.sort(players);
+        System.out.println(players);
+
         // odwrocony
         players.sort(Comparator.reverseOrder());
         // to samo
