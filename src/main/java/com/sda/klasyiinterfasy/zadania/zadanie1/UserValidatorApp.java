@@ -5,7 +5,7 @@ public class UserValidatorApp {
 
         UserValidator userValidator = new UserValidator();
 
-        String [] emails = userValidator.validateEmails("kamil.baronowski@wp.pl", "gmail.com");
+        String [] emails = userValidator.validateEmails("kamil.baronowski@02.pl", "@gmail.com");
         System.out.println(emails[0]);
         System.out.println(emails[1]);
     }

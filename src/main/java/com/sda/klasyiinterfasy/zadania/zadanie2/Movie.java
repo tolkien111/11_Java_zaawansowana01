@@ -1,26 +1,26 @@
 package com.sda.klasyiinterfasy.zadania.zadanie2;
 
 public class Movie {
-    private String titel;
+    private String title;
     private String director;
     private int yearOfPublication;
     private String typeOfMovie;
     private String publisher;
 
-    public Movie(String titel, String director, int yearOfPublication, String typeOfMovie, String publisher) {
-        this.titel = titel;
+    public Movie(String title, String director, int yearOfPublication, String typeOfMovie, String publisher) {
+        this.title = title;
         this.director = director;
         this.yearOfPublication = yearOfPublication;
         this.typeOfMovie = typeOfMovie;
         this.publisher = publisher;
     }
 
-    public String getTitel() {
-        return titel;
+    public String getTitle() {
+        return title;
     }
 
-    public void setTitel(String titel) {
-        this.titel = titel;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getDirector() {
@@ -58,7 +58,7 @@ public class Movie {
     @Override
     public String toString() {
         return "Movie{" +
-                "titel='" + titel + '\'' +
+                "titel='" + title + '\'' +
                 ", director='" + director + '\'' +
                 ", yearOfPublication=" + yearOfPublication +
                 ", typeOfMovie='" + typeOfMovie + '\'' +
@@ -67,14 +67,14 @@ public class Movie {
     }
 
     static class MovieCreator{
-        private String titel;
+        private String title;
         private String director;
         private int yearOfPublication;
         private String typeOfMovie;
         private String publisher;
 
-        public MovieCreator titel (String titel){
-            this.titel = titel;
+        public MovieCreator title (String title){
+            this.title = title;
             return this;
         }
         public MovieCreator director (String director){
@@ -94,7 +94,7 @@ public class Movie {
             return this;
         }
         public Movie createMovie(){
-            Movie movie = new Movie(titel, director, yearOfPublication, typeOfMovie, publisher);
+            Movie movie = new Movie(title, director, yearOfPublication, typeOfMovie, publisher);
             return movie;
         }
     }
