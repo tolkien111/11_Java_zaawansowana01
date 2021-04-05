@@ -8,6 +8,18 @@ public class Car extends Vehicle {
     public Car() { //konstruktor bezargumentowy, wydrukuj w VehicleApp żeby zobaczyć jak są tworzone -> jeden po drugim -> Vehicle->Car
         System.out.println("Tworzenie car");
     }
+//Zadanie 10 ZAAW1/str.106
+    public Car (Car anotherCar){
+        passengers = anotherCar.passengers;
+    }
+
+    public Car (int passengers){
+        System.out.println("Car with " + passengers + " passangers");
+    }
+    public Car (double velocity){
+        System.out.println("Car running at " + velocity);
+    }
+//koniec zadania 10
 
     @Override //nadpisywanie metod przy dziedziczeniu
     public void run(double velocity) {

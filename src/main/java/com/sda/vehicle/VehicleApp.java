@@ -49,9 +49,17 @@ public class VehicleApp {
         car01.removePassengers();
         car01.removePassengers();
         car01.removePassengers();
+        System.out.println("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
 
-
+//Zadanie 10 ZAAW1/str.106 cd.
+        System.out.println("KONSTRUKTOR KOPIUJĄCY");
+        Car mustang = new Car(car01);
+        System.out.println("KONSTRUKTOR Z OKREŚLONĄ LICZBĄ PASAŻERÓW");
+        Car db9 = new Car(4);
+        System.out.println("KONSTRUKTOR Z PODANĄ PRĘDKOŚCIĄ");
+        Car veyron = new Car(356.4);
     }
+//koniec zadania 10
 
     public static void runThisVehicle(Vehicle vehicle) {
         vehicle.run(222);
