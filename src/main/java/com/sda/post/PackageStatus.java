@@ -1,14 +1,48 @@
 package com.sda.post;
 
-public enum PackageStatus {
-    SENT("wysłana"),
-    TRAVELING("podróżuje"),
-    COURIER("W doręczeniu"),
-    DELIVERED("dostarczona"),
-    LOST("zagubiona"),
-    RETURNED("zwrócona");
 
-    private String description;
+import java.lang.reflect.Array;
+
+public enum PackageStatus {
+    SENT("wysłana") {
+        @Override
+        public PackageStatus[] getNextStatuses() {
+            return new PackageStatus []{TRAVELING, LOST};
+        }
+    },
+    TRAVELING("podróżuje") {
+        @Override
+        public PackageStatus[] getNextStatuses() {
+            return new PackageStatus[]{COURIER, LOST};
+        }
+    },
+
+    COURIER("w doręczeniu") {
+        @Override
+        public PackageStatus[] getNextStatuses() {
+            return new PackageStatus[]{DELIVERED, RETURNED, LOST};
+        }
+    },
+    DELIVERED("dostarczona") {
+        @Override
+        public PackageStatus[] getNextStatuses() {
+            return new PackageStatus[]{};
+        }
+    },
+    LOST("zagubiona") {
+        @Override
+        public PackageStatus[] getNextStatuses() {
+            return new PackageStatus[]{};
+        }
+    },
+    RETURNED("zwrócona") {
+        @Override
+        public PackageStatus[] getNextStatuses() {
+            return new PackageStatus[]{};
+        }
+    };
+
+    private final String description;
 
     PackageStatus(String d) { // opis do enuma, niepełne info
         this.description = d;
@@ -17,6 +51,7 @@ public enum PackageStatus {
     public String getDescription() {
         return description;
     }
+
     //statyczna metoda w klasie enum
     public static PackageStatus[] getErrorStatuses() {
         PackageStatus[] packageStatuses = {LOST, RETURNED};
@@ -32,6 +67,12 @@ public enum PackageStatus {
 //        }
         return this == LOST || this == RETURNED; // najkrótszy sposób pokazania wartości boolean w naszym przykładzie
     }
+
+//Zadanie 10.1/ZAAW2/str.92
+    public PackageStatus [] getNextStatuses() {
+        return null;
+    }
+
 
     @Override
     public String toString() {

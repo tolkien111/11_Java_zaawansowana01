@@ -7,6 +7,9 @@ public class Package {
     String whatIsInside;
     String packageNumber;
 
+    public Package() {
+    }
+
     public Package(PackageStatus packageStatus, String whatIsInside) {
         this.packageStatus = packageStatus;
         this.whatIsInside = whatIsInside;
