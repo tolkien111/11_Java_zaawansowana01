@@ -1,4 +1,8 @@
-package com.sda.opp.zadania;
+package com.sda.opp.zadania.zadanie1;
+
+import com.sda.opp.zadania.zadanie1.Line;
+import com.sda.opp.zadania.zadanie1.Point2D;
+import com.sda.opp.zadania.zadanie1.Point3D;
 
 import java.util.Arrays;
 

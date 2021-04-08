@@ -1,6 +1,8 @@
-package com.sda.opp.zadania;
+package com.sda.opp.zadania.zadanie1;
 
-public class Point3D extends  Point2D {
+import com.sda.opp.zadania.zadanie1.Point2D;
+
+public class Point3D extends Point2D {
     private float z;
 
     public Point3D(float x, float y, float z) {

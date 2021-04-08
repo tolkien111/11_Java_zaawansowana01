@@ -1,4 +1,4 @@
-package com.sda.opp.zadania;
+package com.sda.opp.zadania.zadanie1;
 
 public class Line {
     private Point2D point01;

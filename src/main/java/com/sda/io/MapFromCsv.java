@@ -35,8 +35,8 @@ public class MapFromCsv {
                 if (values.length != 2) {
                     throw new RuntimeException(" nieprawidłowa lini: " + line);
                 }
-                String name = values[0];
-                String surname = values[1];
+                String name = values[0].trim();
+                String surname = values[1].trim();
                 loadedData.put(name, surname);
 
                 line = bufferedReader.readLine();

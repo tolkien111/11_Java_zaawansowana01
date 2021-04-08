@@ -8,6 +8,7 @@ public enum PackageStatus {
         @Override
         public PackageStatus[] getNextStatuses() {
             return new PackageStatus []{TRAVELING, LOST};
+
         }
     },
     TRAVELING("podróżuje") {
@@ -69,9 +70,7 @@ public enum PackageStatus {
     }
 
 //Zadanie 10.1/ZAAW2/str.92
-    public PackageStatus [] getNextStatuses() {
-        return null;
-    }
+    public abstract PackageStatus [] getNextStatuses();
 
 
     @Override

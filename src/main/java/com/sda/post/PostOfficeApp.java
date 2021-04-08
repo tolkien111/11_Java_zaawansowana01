@@ -2,6 +2,7 @@ package com.sda.post;
 
 // Zadanie do ENUM, zadanie 7.2/str.88
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class PostOfficeApp {
@@ -61,7 +62,8 @@ public class PostOfficeApp {
         }
 // Zadanie 10.1/ZAAW2/str.95
 
-//        box.changeStatus(PackageStatus.SENT.getNextStatuses()[]); //problem z wywołaniem metody ://
+        PackageStatus [] status = PackageStatus.SENT.getNextStatuses();
+        System.out.println(Arrays.toString(status));
     }
 
 
