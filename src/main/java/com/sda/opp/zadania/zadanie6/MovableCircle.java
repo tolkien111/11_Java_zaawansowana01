@@ -30,11 +30,28 @@ public class MovableCircle implements Movable {
         movablePoint.moveRight();
     }
 
+    public MovablePoint getMovablePoint() {
+        return movablePoint;
+    }
+
+    public void setMovablePoint(MovablePoint movablePoint) {
+        this.movablePoint = movablePoint;
+    }
+
+    public double getCircleRadius() {
+        return circleRadius;
+    }
+
+    public void setCircleRadius(double circleRadius) {
+        this.circleRadius = circleRadius;
+    }
+
     @Override
     public String toString() {
         return "MovableCircle{" +
-                "movablePoint=" + movablePoint +
-                ", circleRadius=" + circleRadius +
+                "circleRadius=" + circleRadius +
+                ", movablePoint=" + movablePoint +
                 '}';
     }
 }
+

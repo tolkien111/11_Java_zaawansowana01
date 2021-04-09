@@ -9,7 +9,7 @@ public class MovableApp {
         movablePoint.moveDown();
         System.out.println(movablePoint);
 
-        MovableCircle movableCircle = new MovableCircle(44, 30,45, 5,6);
+        Movable movableCircle = new MovableCircle(44, 30,45, 5,6);
         movableCircle.moveUp();
         movableCircle.moveLeft();
         System.out.println(movableCircle);
