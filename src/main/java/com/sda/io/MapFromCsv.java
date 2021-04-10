@@ -25,7 +25,7 @@ public class MapFromCsv {
     private static Map<String, String> readFromFile(Path path) {
         Map<String, String> loadedData = new HashMap<>();
 
-
+//try-with-resources
         try (BufferedReader bufferedReader = Files.newBufferedReader(path)) {//jeżeli cokolwiek się stanie tutaj to java zwolni nam plik -> nie potrzeba finally aby czyścić
                                                                              // trzeba zamykać/czyścić po sobie jak pracujemy na plikach -> try with resources czyli linia ->
             String line = bufferedReader.readLine();                         // -> try (BufferedReader bufferedReader = Files.newBufferedReader(path))
