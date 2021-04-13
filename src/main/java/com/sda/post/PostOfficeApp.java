@@ -66,10 +66,9 @@ public class PostOfficeApp {
                     statusIsTrue = true;
                     break;
 
-                }
-                System.out.println("błędny status"); //wyświetla info o błędnym statusie w każdej iteracji, jak to zmienić?
+                } else if (!status.getDescription().equalsIgnoreCase(chosenPackageStatus) && PackageStatus.RETURNED == status)
+                System.out.println("błędny status"); //bardzo proste ograniczenie żeby "błedny status" został wyświetlony raz. Inny pomysł?
             }
-            System.out.println(box);
         }
 
 
