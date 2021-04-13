@@ -1,8 +1,5 @@
 package com.sda.post;
 
-
-import java.lang.reflect.Array;
-
 public enum PackageStatus {
     SENT("wysłana") {
         @Override

@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class PostOfficeApp {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InvalidStateException {
 
         PackageStatus sentStatus = PackageStatus.SENT;
         System.out.println(sentStatus);
@@ -42,7 +42,7 @@ public class PostOfficeApp {
         System.out.println(PackageStatus.RETURNED.isError());
         System.out.println("7");
 
-//Zadanie 9 ZAAW2/str.92/ brak punktu 3a i 3b - jak można je ugryźć?
+//Zadanie 9 ZAAW2/str.92/
 
         Package box = new Package();
 
@@ -51,19 +51,54 @@ public class PostOfficeApp {
         }
 
         Scanner sc = new Scanner(System.in);
-        System.out.println("Wpisz aktualny status paczki z listy wydrukowanej powyżej");
-        String chosenPackageStatus = sc.nextLine();
 
-        for (PackageStatus status : PackageStatus.values()) {
-            if (status.getDescription().equals(chosenPackageStatus)) {
-                box.changeStatus(status);
-                break;
+        boolean statusIsTrue = false;
+
+        while (!statusIsTrue) {
+            System.out.println("Wpisz aktualny status paczki z listy wydrukowanej powyżej");
+            String chosenPackageStatus = sc.nextLine();
+
+
+            for (PackageStatus status : PackageStatus.values()) {
+                if (status.getDescription().equalsIgnoreCase(chosenPackageStatus)) {
+                    box.changeStatus(status);
+                    System.out.println(box);
+                    statusIsTrue = true;
+                    break;
+
+                }
+                System.out.println("błędny status"); //wyświetla info o błędnym statusie w każdej iteracji, jak to zmienić?
             }
+            System.out.println(box);
         }
-// Zadanie 10.1/ZAAW2/str.95
 
-        PackageStatus [] status = PackageStatus.SENT.getNextStatuses();
+
+        System.out.println("8");
+
+// Zadanie 10.1 i 10.2/ZAAW2/str.95
+
+        PackageStatus[] status = PackageStatus.SENT.getNextStatuses();
         System.out.println(Arrays.toString(status));
+
+        Package newBox = new Package();
+
+        try {
+            newBox.changeStatus(PackageStatus.SENT);
+
+        } catch (InvalidStateException invalidStateException) {
+            System.out.println("Podano błędny status");
+        }
+
+        System.out.println(newBox);
+        System.out.println("-----------");
+
+        try {
+            newBox.changeStatus(PackageStatus.DELIVERED);
+        } catch (InvalidStateException invalidStateException) {
+            System.out.println("Podano błędny status");
+        }
+        System.out.println(newBox);
+
     }
 
 
