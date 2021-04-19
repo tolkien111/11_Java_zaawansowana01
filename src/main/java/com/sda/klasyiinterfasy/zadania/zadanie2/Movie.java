@@ -1,5 +1,6 @@
 package com.sda.klasyiinterfasy.zadania.zadanie2;
 
+
 public class Movie {
     private String title;
     private String director;

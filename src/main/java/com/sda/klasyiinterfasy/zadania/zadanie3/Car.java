@@ -1,5 +1,6 @@
 package com.sda.klasyiinterfasy.zadania.zadanie3;
 
+
 public class Car {
     private String nameCar;
     private String typeOfCar;

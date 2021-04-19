@@ -44,6 +44,7 @@ public class PostOfficeApp {
 
 //Zadanie 9 ZAAW2/str.92/
 
+
         Package box = new Package();
 
         for (PackageStatus status : PackageStatus.values()) {

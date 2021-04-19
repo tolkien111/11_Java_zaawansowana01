@@ -1,5 +1,6 @@
 package com.sda.klasyiinterfasy.zadania.zadanie2;
 
+
 public class MovieApp {
 
     public static void main(String[] args) {

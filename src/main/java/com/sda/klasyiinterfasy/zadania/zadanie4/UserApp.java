@@ -3,6 +3,7 @@ package com.sda.klasyiinterfasy.zadania.zadanie4;
 public class UserApp {
     public static void main(String[] args) {
 
+
         User user = new User();
 
         user.setName("Robert", new Validator<String>() {
