@@ -1,16 +1,18 @@
 package com.sda.kolekcje.zadania.zadanie2;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.List;
 import java.util.Objects;
 
-public class Book {
+public class Book  implements  Comparable <Book>{
     private String title;
     private float price;
-    private short yearOfPublishing;
+    private int yearOfPublishing;
     private List <Author> authorsList;
     private Genre genre;
 
-    public Book(String title, float price, short yearOfPublishing, List<Author> authorsList, Genre genre) {
+    public Book(String title, float price, int yearOfPublishing, List<Author> authorsList, Genre genre) {
         this.title = title;
         this.price = price;
         this.yearOfPublishing = yearOfPublishing;
@@ -34,11 +36,11 @@ public class Book {
         this.price = price;
     }
 
-    public short getYearOfPublishing() {
+    public int getYearOfPublishing() {
         return yearOfPublishing;
     }
 
-    public void setYearOfPublishing(short yearOfPublishing) {
+    public void setYearOfPublishing(int yearOfPublishing) {
         this.yearOfPublishing = yearOfPublishing;
     }
 
@@ -76,7 +78,7 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Book{" +
+        return  "Book{" +
                 "title='" + title + '\'' +
                 ", price=" + price +
                 ", yearOfPublishing=" + yearOfPublishing +
@@ -84,4 +86,10 @@ public class Book {
                 ", genre=" + genre +
                 '}';
     }
+
+    @Override
+    public int compareTo(Book o) {
+        return title.compareTo(o.getTitle()); //inaczej niż w odpowiedziach -> o.getTitle().compareTo(title) - w takim wypadku sortuje od z do a
+    }
 }
+
