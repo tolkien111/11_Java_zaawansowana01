@@ -1,7 +1,6 @@
 package com.sda.kolekcje.zadania.zadanie2;
 
 import java.util.Objects;
-import java.util.Queue;
 
 public class Author {
     private String Name;
