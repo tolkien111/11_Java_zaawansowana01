@@ -94,5 +94,14 @@ public class BookService {
         List <Book> result02 = listBook.stream().filter(book -> book.getAuthorsList().contains(author)).collect(Collectors.toList()); //drugie rozwiązanie
         return result;
     }
+//Zadanie4
+    public Map < Genre, String> uniqueBookMap (){
+        Map <Genre, String> uniqueMap = new HashMap<>();
+        for (Book book : listBook){
+            uniqueMap.put(book.getGenre(), book.getTitle());
+        }
+
+    return uniqueMap;
+    }
 
 }
