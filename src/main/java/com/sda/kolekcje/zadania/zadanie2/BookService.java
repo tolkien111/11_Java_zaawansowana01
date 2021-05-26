@@ -1,6 +1,7 @@
 package com.sda.kolekcje.zadania.zadanie2;
 
 import java.util.*;
+import java.util.function.ToDoubleFunction;
 import java.util.stream.Collectors;
 
 public class BookService {
@@ -80,28 +81,46 @@ public class BookService {
         return reverseBooks;
     }
 
-    public boolean isBookInRepo (Book book){
+    public boolean isBookInRepo(Book book) {
         return listBook.contains(book);
     }
 
-    public List <Book> findBookByAuthor(Author author){
-        List <Book> result = new ArrayList<>();
-        for (Book element : listBook){
-            if (element.getAuthorsList().contains(author)){
+    public List<Book> findBookByAuthor(Author author) {
+        List<Book> result = new ArrayList<>();
+        for (Book element : listBook) {
+            if (element.getAuthorsList().contains(author)) {
                 result.add(element);
             }
         }
-        List <Book> result02 = listBook.stream().filter(book -> book.getAuthorsList().contains(author)).collect(Collectors.toList()); //drugie rozwiązanie
+        List<Book> result02 = listBook.stream().filter(book -> book.getAuthorsList().contains(author)).collect(Collectors.toList()); //drugie rozwiązanie
         return result;
     }
-//Zadanie4
-    public Map < Genre, String> uniqueBookMap (){
-        Map <Genre, String> uniqueMap = new HashMap<>();
-        for (Book book : listBook){
+
+    //Zadanie4
+    public Map<Genre, String> uniqueBookMap() {
+        Map<Genre, String> uniqueMap = new HashMap<>();
+        for (Book book : listBook) {
             uniqueMap.put(book.getGenre(), book.getTitle());
         }
 
-    return uniqueMap;
+        return uniqueMap;
     }
 
+    //Zadanie5
+    public Stack<Book> makeBookStackAndSortBooksFromHighestPrice() {
+
+        listBook.sort(Comparator.comparingDouble(new ToDoubleFunction<Book>() {
+
+            @Override
+            public double applyAsDouble(Book value) {
+                return value.getPrice();
+            }
+        }));
+
+        Stack<Book> stackBooks = new Stack<>();
+        for (Book book : listBook) {
+            stackBooks.push(book);
+        }
+        return stackBooks;
+    }
 }
