@@ -1,17 +1,34 @@
 package com.sda.basketball;
 
+import java.math.BigDecimal;
 import java.util.Objects;
 
 public class Player implements Comparable<Player> {
     private String firstName;
     private String lastName;
     private int height;
-    private int earnings;
+    private BigDecimal earnings;
+    private String dateOfBirth;
 
     public Player(String firstName, String lastName, int height) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.height = height;
+    }
+
+    public Player(String firstName, String lastName, int height, BigDecimal earnings) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.height = height;
+        this.earnings = earnings;
+    }
+
+    public Player(String firstName, String lastName, int height, BigDecimal earnings, String dateOfBirth) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.height = height;
+        this.earnings = earnings;
+        this.dateOfBirth = dateOfBirth;
     }
 
     public String getFirstName() {
@@ -38,7 +55,22 @@ public class Player implements Comparable<Player> {
         this.height = height;
     }
 
-//Metoda compareTo ma zwracać:
+    public BigDecimal getEarnings() {
+        return earnings;
+    }
+
+    public void setEarnings(BigDecimal earnings) {
+        this.earnings = earnings;
+    }
+
+    public String getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public void setDateOfBirth(String dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+    }
+    //Metoda compareTo ma zwracać:
 //dodatnią liczbę jeśli this jest wyższy od otrzymanego gracza
 //zero jeśli obaj mają ten sam wzrost
 //ujemną liczbę jeśli otrzymany jest wyższy

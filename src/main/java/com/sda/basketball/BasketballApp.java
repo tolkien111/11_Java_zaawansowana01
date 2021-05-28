@@ -1,29 +1,55 @@
 package com.sda.basketball;
 
+import com.sda.exceptions.InvalidNameException;
+
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
 public class BasketballApp {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InvalidPlayerException {
         // ZESPOL BASKETBALL TEAM
-        Player youngJordan = new Player("M", "J", 180); //dwóch jordanow, dwóch identycznych ale inaczej zadeklarowanych
-        Player oldJordan = new Player("M", "J", 198);
-        Player gortat = new Player("M", "G", 211);
-        Player ming = new Player("Y", "M", 229);
+        Player youngJordan = new Player("M ", "J", 180,new BigDecimal("2015"),"20-02-1979"); //dwóch jordanow, dwóch identycznych ale inaczej zadeklarowanych
+        Player oldJordan = new Player("A", "J", 198,new BigDecimal("3000"),"20-02-1979");
+        Player gortat = new Player("Z", " G", 211,new BigDecimal("2000"), "21-05-1981");
+        Player ming = new Player("Y", "M", 229, new BigDecimal("3200"), "21-09-1975");
+        Player oldPlayer = new Player("Y", "MY", 219, new BigDecimal("1955"), "21-09-1933");
 
         System.out.println("Oba Jordany tacy sami: " + youngJordan.equals(oldJordan));  // przed zmianą equals() i hashCode() wyświetliłoby że są różni
-                                                                                        // wynika to z tego że obiekty ulokowane są w różnych miejscach pamięci
-                                                                                        // należy nadpisać metodę equals() i hashCode() w player
-                                                                                        // aby sprawdzało czy są tacy sami wg naszych kryteriów
+        // wynika to z tego że obiekty ulokowane są w różnych miejscach pamięci
+        // należy nadpisać metodę equals() i hashCode() w player
+        // aby sprawdzało czy są tacy sami wg naszych kryteriów
         System.out.println("1\n");
 
+
         BasketballTeam team = new BasketballTeam();
-        team.addPlayer(youngJordan);
-        team.addPlayer(oldJordan);
-        team.addPlayer(gortat);
-        team.addPlayer(ming);
+        try {
+            team.addPlayer(youngJordan);
+        } catch (InvalidPlayerException exception) {
+            exception.printStackTrace();
+        }
+        try {
+            team.addPlayer(oldJordan);
+        } catch (InvalidPlayerException exception) {
+            exception.printStackTrace();
+        }
+        try {
+            team.addPlayer(gortat);
+        } catch (InvalidPlayerException exception) {
+            exception.printStackTrace();
+        }
+        try {
+            team.addPlayer(ming);
+        } catch (InvalidPlayerException exception) {
+            exception.printStackTrace();
+        }
+        try {
+            team.addPlayer(oldPlayer);
+        } catch (InvalidPlayerException exception) {
+            exception.printStackTrace();
+        }
 
         System.out.println("przed filtrowaniem" + team.getPlayers());
         System.out.println("2\n");
@@ -69,5 +95,25 @@ public class BasketballApp {
 
         System.out.println("PO REVERSE ORDER");
         System.out.println(players);
+        System.out.println("5\n");
+
+        //zadanie 4_JAVA_ZAAW 3
+
+        System.out.println(team.sortByEarnings());
+        System.out.println("6\n");
+        System.out.println(team.getPlayerWithTheHighestSalary());
+        System.out.println("7\n");
+        System.out.println(team.sortByName());
+        System.out.println("8\n");
+
+        //zadanie 5_JAVA_ZAAW 3
+        System.out.println(team.sortByBirthdate());
+        System.out.println("8\n");
+        team.showListAgeOfPlayer();
+        System.out.println(team.showListAgeOfPlayer());
+        System.out.println("9\n");
+        System.out.println(team.sortByAgeAndSalary());
+        System.out.println("10\n");
+        System.out.println(team.getPlayerWithTheHighestSalaryAndYoungerOfAgeLimit(45));
     }
 }
